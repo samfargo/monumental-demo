@@ -1,4 +1,4 @@
-"""Minimal Feature Store API for serving engineered fabrication metrics."""
+"""Minimal ML feature store API for serving engineered fabrication metrics."""
 
 from __future__ import annotations
 

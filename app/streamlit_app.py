@@ -154,7 +154,7 @@ def render_cost_profitability(jobs, features):
 
 def render_feature_store(features):
     """Render engineered feature list and correlations."""
-    st.subheader("Feature Store Overview")
+    st.subheader("ML Feature Store Overview")
     feature_columns = [
         col
         for col in features.columns

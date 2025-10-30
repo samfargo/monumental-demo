@@ -8,5 +8,5 @@ This folder expands on how the synthetic fabrication data platform is assembled,
 
 ## Key Concepts
 - **Multi-source integration:** PowerMill CAM output anchors job IDs that are enriched with KUKA telemetry, QC scoring, ERP costs, and operator observations.
-- **Warehouse-first approach:** DuckDB writes Parquet artifacts for reproducible analytics, feature stores, and dashboard consumption.
+- **Warehouse-first approach:** DuckDB writes Parquet artifacts for reproducible analytics, ML feature stores, and dashboard consumption.
 - **Quality guardrails:** The `data_quality.py` script quantifies completeness, nulls, outliers, and tool-catalog drift so the demo mirrors production observability.
