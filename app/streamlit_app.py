@@ -409,25 +409,30 @@ def render_cost_profitability(jobs, features):
 
     # Display styled dataframe
     st.markdown("##### JOB COST BREAKDOWN")
+    
+    # Format the dataframe for display
+    display_df = joined[
+        [
+            "job_id",
+            "material",
+            "stone_type",
+            "labor_hours",
+            "tool_wear_cost_usd",
+            "revenue_usd",
+            "profit_usd",
+            "defect_count",
+        ]
+    ].copy()
+    
+    # Format currency and numeric columns
+    display_df["labor_hours"] = display_df["labor_hours"].apply(lambda x: f"{x:.2f}")
+    display_df["tool_wear_cost_usd"] = display_df["tool_wear_cost_usd"].apply(lambda x: f"${x:.2f}")
+    display_df["revenue_usd"] = display_df["revenue_usd"].apply(lambda x: f"${x:.2f}")
+    display_df["profit_usd"] = display_df["profit_usd"].apply(lambda x: f"${x:.2f}")
+    display_df["defect_count"] = display_df["defect_count"].apply(lambda x: f"{int(x)}")
+    
     st.dataframe(
-        joined[
-            [
-                "job_id",
-                "material",
-                "stone_type",
-                "labor_hours",
-                "tool_wear_cost_usd",
-                "revenue_usd",
-                "profit_usd",
-                "defect_count",
-            ]
-        ].set_index("job_id").style.format({
-            "labor_hours": "{:.2f}",
-            "tool_wear_cost_usd": "${:.2f}",
-            "revenue_usd": "${:.2f}",
-            "profit_usd": "${:.2f}",
-            "defect_count": "{:.0f}",
-        }).background_gradient(subset=["profit_usd"], cmap="RdYlGn"),
+        display_df.set_index("job_id"),
         use_container_width=True,
         height=350,
     )
