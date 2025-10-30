@@ -1,8 +1,32 @@
 Fabrication Data Platform Demo
 ================================
 
-### Elevator Pitch
-This repo demonstrates how a data engineer stitches together CAM, robotic telemetry, QC, and ERP context for a robotic stone-carving shop. Synthetic datasets feed a repeatable Python ETL pipeline, data quality guardrails, engineered metrics, and a Streamlit dashboard that showcases production, profitability, and feature-store views.
+**The Problem:** As Monumental Labs scales to 40,000 sq ft with a dozen+ robots, 
+fabrication data lives in fragmented silos (PowerMill exports, KUKA logs, QC spreadsheets, 
+ERP systems). No unified view = no ML training data, no cost insights, no predictive analytics.
+
+**This Demo:** A working prototype showing how a data engineer builds the 
+infrastructure layer that connects design → execution → intelligence. Synthetic datasets feed a repeatable Python ETL pipeline, data quality guardrails, engineered metrics, and a Streamlit dashboard that showcases production, profitability, and feature-store views.
+
+## What This Platform Enables
+
+### For ML Engineers
+- Query 15+ engineered features instantly
+- Every carve automatically becomes training data
+- Correlations pre-computed for toolpath optimization
+
+### For Digital Fabricators
+- Instant time/cost estimates for new designs
+- Historical lookup: "How long did similar pieces take?"
+- Tool replacement forecasting
+
+### For Leadership
+- Real-time cost per job tracking
+- Profitability analysis by stone type
+- Data-backed customer quotes
+- Investor-ready production metrics
+
+🔗 [Live Dashboard](https://monumental-demo.streamlit.app)  
 
 ### Installation & Quickstart
 ```bash
