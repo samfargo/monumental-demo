@@ -1,0 +1,32 @@
+{
+  "row_count": 75,
+  "source_counts": {
+    "powermill": 75,
+    "kuka": 75,
+    "quality": 75,
+    "erp": 75,
+    "operator": 75
+  },
+  "merge_success_rate": 1.0,
+  "missing_percent": {
+    "job_id": 0.0,
+    "material": 0.0,
+    "tool_id": 0.0,
+    "feed_rate_mm_min": 0.0,
+    "stepover_mm": 0.0,
+    "path_length_mm": 0.0,
+    "volume_removed_cm3": 0.0,
+    "simulation_time_min": 0.0,
+    "spindle_current_a": 0.0,
+    "torque_mean_nm": 0.0,
+    "duration_s": 0.0,
+    "energy_kwh": 0.0,
+    "surface_score": 0.0,
+    "defect_count": 0.0,
+    "tool_wear_cost_usd": 0.0,
+    "labor_hours": 0.0,
+    "revenue_usd": 0.0,
+    "stone_type": 0.0,
+    "operator_notes": 0.0
+  }
+}

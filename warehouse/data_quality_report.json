@@ -1,0 +1,25 @@
+{
+  "record_count": 75,
+  "completeness_percent": {
+    "powermill": 100.0,
+    "kuka": 100.0,
+    "quality": 100.0,
+    "erp": 100.0,
+    "operator": 100.0
+  },
+  "critical_nulls": {
+    "duration_s": 0,
+    "surface_score": 0,
+    "revenue_usd": 0
+  },
+  "carve_time_outliers": {
+    "count": 1,
+    "job_ids": [
+      "J031"
+    ]
+  },
+  "tool_catalog_validation": {
+    "invalid_count": 0,
+    "unknown_ids": []
+  }
+}

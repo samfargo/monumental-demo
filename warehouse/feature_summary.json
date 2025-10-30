@@ -1,0 +1,24 @@
+{
+  "record_count": 75,
+  "feature_columns": [
+    "job_id",
+    "material",
+    "stone_type",
+    "feed_rate_mm_min",
+    "stepover_mm",
+    "path_length_mm",
+    "volume_removed_cm3",
+    "spindle_current_a",
+    "duration_s",
+    "surface_score",
+    "tool_wear_cost_usd",
+    "labor_hours",
+    "revenue_usd",
+    "complexity_per_cm3",
+    "load_per_mm",
+    "energy_per_cm3",
+    "tool_efficiency",
+    "profit_margin",
+    "quality_vs_speed"
+  ]
+}

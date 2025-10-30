@@ -22,9 +22,14 @@ def load_integrated(warehouse_dir: Path) -> pd.DataFrame:
     return query.to_df()
 
 
-def safe_divide(numerator: pd.Series, denominator: pd.Series) -> pd.Series:
+def safe_divide(numerator: pd.Series, denominator: pd.Series | float) -> pd.Series:
     """Helper that handles division by zero and nulls gracefully."""
-    result = numerator / denominator.replace({0: np.nan})
+    if isinstance(denominator, (int, float)):
+        if denominator == 0:
+            return pd.Series([np.nan] * len(numerator), index=numerator.index)
+        result = numerator / denominator
+    else:
+        result = numerator / denominator.replace({0: np.nan})
     return result.replace([np.inf, -np.inf], np.nan)
 
 
