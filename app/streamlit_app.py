@@ -7,7 +7,7 @@ from pathlib import Path
 import plotly.express as px
 import streamlit as st
 
-from app import utils
+import utils
 
 
 st.set_page_config(

@@ -6,7 +6,7 @@ from typing import Any, Dict, List
 
 from flask import Flask, abort, jsonify, request
 
-from app import utils
+import utils
 
 app = Flask(__name__)
 
