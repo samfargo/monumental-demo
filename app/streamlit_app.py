@@ -18,191 +18,206 @@ st.set_page_config(
     initial_sidebar_state="collapsed",
 )
 
-# Custom CSS for beautiful aesthetics
+# Custom CSS - Industrial stone fabrication aesthetic
 st.markdown(
     """
     <style>
-    /* Import modern font */
-    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+    /* Import professional fonts */
+    @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap');
     
-    /* Global styles */
+    /* Global styles - industrial precision */
     * {
-        font-family: 'Inter', sans-serif;
+        font-family: 'IBM Plex Sans', -apple-system, sans-serif;
     }
     
-    /* Main container styling */
+    /* Main container - concrete and steel */
     .main {
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        background: linear-gradient(180deg, #1a1d23 0%, #2d3748 100%);
         background-attachment: fixed;
     }
     
     .block-container {
         padding-top: 2rem;
         padding-bottom: 2rem;
-        background: rgba(255, 255, 255, 0.98);
-        border-radius: 20px;
-        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        background: #f5f5f0;
+        border: 3px solid #3d4451;
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
         margin: 1rem;
     }
     
-    /* Header styling */
+    /* Headers - architectural precision */
     h1 {
         font-weight: 700;
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
+        color: #1a1d23;
         font-size: 3rem !important;
         margin-bottom: 0.5rem !important;
-        letter-spacing: -1px;
+        letter-spacing: -0.5px;
+        text-transform: uppercase;
+        border-bottom: 4px solid #b8860b;
     }
     
     h2 {
-        color: #2d3748;
+        color: #1a1d23;
         font-weight: 600;
-        font-size: 1.75rem !important;
+        font-size: 1.5rem !important;
         margin-top: 2rem !important;
         margin-bottom: 1.5rem !important;
         padding-bottom: 0.5rem;
-        border-bottom: 3px solid #667eea;
-        display: inline-block;
+        border-bottom: 2px solid #3d4451;
+        text-transform: uppercase;
+        letter-spacing: 1px;
     }
     
-    h3 {
-        color: #4a5568;
+    h3, h5 {
+        color: #2d3748;
         font-weight: 600;
         margin-top: 1rem !important;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        font-size: 0.9rem !important;
     }
     
-    /* Metric cards */
+    /* Metric cards - industrial panels */
     [data-testid="stMetricValue"] {
-        font-size: 2rem;
+        font-size: 2.5rem;
         font-weight: 700;
-        color: #667eea;
+        color: #1a1d23;
+        font-family: 'IBM Plex Mono', monospace;
     }
     
     [data-testid="stMetricLabel"] {
-        font-size: 0.9rem;
-        font-weight: 500;
-        color: #4a5568;
+        font-size: 0.75rem;
+        font-weight: 600;
+        color: #5a6472;
         text-transform: uppercase;
-        letter-spacing: 0.5px;
+        letter-spacing: 1.5px;
     }
     
     [data-testid="stMetric"] {
-        background: linear-gradient(135deg, #f6f8fb 0%, #ffffff 100%);
+        background: linear-gradient(145deg, #ffffff, #e8e8e0);
         padding: 1.5rem;
-        border-radius: 12px;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.07);
-        border: 1px solid #e2e8f0;
-        transition: transform 0.2s, box-shadow 0.2s;
+        border: 2px solid #3d4451;
+        box-shadow: 
+            4px 4px 8px rgba(0, 0, 0, 0.2),
+            inset 1px 1px 2px rgba(255, 255, 255, 0.5);
     }
     
-    [data-testid="stMetric"]:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 8px 12px rgba(102, 126, 234, 0.15);
-    }
-    
-    /* Tabs styling */
+    /* Tabs - industrial switches */
     .stTabs [data-baseweb="tab-list"] {
-        gap: 8px;
-        background-color: #f7fafc;
+        gap: 4px;
+        background-color: #3d4451;
         padding: 0.5rem;
-        border-radius: 12px;
+        border: 2px solid #2d3748;
     }
     
     .stTabs [data-baseweb="tab"] {
-        height: 50px;
-        background-color: transparent;
-        border-radius: 8px;
-        color: #4a5568;
-        font-weight: 500;
-        padding: 0 24px;
-        transition: all 0.2s;
+        height: 45px;
+        background-color: #5a6472;
+        color: #e8e8e0;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        font-size: 0.85rem;
+        padding: 0 20px;
+        border: 1px solid #3d4451;
     }
     
     .stTabs [data-baseweb="tab"]:hover {
-        background-color: #e2e8f0;
-        color: #667eea;
+        background-color: #6b7280;
+        color: #ffffff;
     }
     
     .stTabs [aria-selected="true"] {
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-        color: white !important;
-        font-weight: 600;
-        box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+        background: linear-gradient(145deg, #b8860b, #daa520);
+        color: #1a1d23 !important;
+        font-weight: 700;
+        border: 2px solid #8b6914;
+        box-shadow: inset 2px 2px 4px rgba(0, 0, 0, 0.3);
     }
     
-    /* Dataframe styling */
+    /* Dataframe - technical readouts */
     .stDataFrame {
-        border-radius: 12px;
+        border: 2px solid #3d4451;
         overflow: hidden;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.07);
+        box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
     }
     
-    /* Info boxes */
+    /* Info boxes - industrial alerts */
     .stAlert {
-        border-radius: 12px;
-        border: none;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        border: 2px solid #3d4451;
+        border-left: 4px solid #b8860b;
+        background-color: #ffffff;
+        box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
     }
     
-    /* Progress bars */
+    /* Progress bars - machine indicators */
     .stProgress > div > div > div {
-        background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
-        border-radius: 10px;
+        background: linear-gradient(90deg, #b8860b 0%, #daa520 100%);
     }
     
     .stProgress > div > div {
-        background-color: #e2e8f0;
-        border-radius: 10px;
+        background-color: #d1d5db;
+        border: 1px solid #9ca3af;
     }
     
-    /* Images */
+    /* Images - technical diagrams */
     img {
-        border-radius: 12px;
-        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+        border: 3px solid #3d4451;
+        box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.3);
     }
     
-    /* Code blocks */
+    /* Code blocks - technical specifications */
     code {
-        background-color: #f7fafc;
-        padding: 0.2rem 0.4rem;
-        border-radius: 4px;
-        color: #667eea;
+        background-color: #2d3748;
+        color: #daa520;
+        padding: 0.2rem 0.5rem;
+        border: 1px solid #3d4451;
+        font-family: 'IBM Plex Mono', monospace;
         font-weight: 500;
     }
     
     /* Footer */
     .footer {
         text-align: center;
-        color: #718096;
+        color: #5a6472;
         padding: 2rem 0;
         margin-top: 3rem;
-        border-top: 2px solid #e2e8f0;
-        font-size: 0.9rem;
+        border-top: 3px solid #3d4451;
+        font-size: 0.85rem;
+        background: linear-gradient(145deg, #e8e8e0, #ffffff);
     }
     
-    /* Plotly charts */
+    /* Plotly charts - technical graphs */
     .js-plotly-plot {
-        border-radius: 12px;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.07);
-        overflow: hidden;
+        border: 2px solid #3d4451;
+        box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
+        background: #ffffff;
+    }
+    
+    /* Custom panels */
+    .industrial-panel {
+        background: linear-gradient(145deg, #ffffff, #e8e8e0);
+        border: 2px solid #3d4451;
+        padding: 1.5rem;
+        margin: 1rem 0;
+        box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
     }
     </style>
     """,
     unsafe_allow_html=True,
 )
 
-# Color palette for charts
+# Color palette - stone, metal, and industrial colors
 CHART_COLORS = {
-    "primary": ["#667eea", "#764ba2", "#f093fb", "#4facfe"],
-    "gradient": ["#667eea", "#7b68ee", "#8b5cf6", "#9333ea", "#a855f7"],
+    "primary": ["#5a6472", "#8b7355", "#b8860b", "#708090"],
+    "gradient": ["#2d3748", "#3d4451", "#5a6472", "#708090", "#8b9098"],
+    "stone": ["#8b8680", "#a8a39d", "#c0bcb5", "#d3cfc8"],
+    "metal": ["#3d4451", "#5a6472", "#708090", "#8b9098"],
     "material": {
-        "stone": "#667eea",
-        "metal": "#f093fb",
-        "wood": "#feca57",
-        "composite": "#48dbfb",
+        "stone": "#8b8680",
+        "metal": "#708090",
+        "wood": "#8b7355",
+        "composite": "#5a6472",
     },
 }
 
@@ -218,38 +233,26 @@ def load_data():
 
 def render_system_overview():
     """Render the system overview tab with diagram and narrative."""
-    st.markdown(
-        """
-        <div style='text-align: center; margin-bottom: 2rem;'>
-            <h2 style='border: none; font-size: 2rem; color: #2d3748;'>
-                🏛️ How Data Flows Across the Fabrication Platform
-            </h2>
-        </div>
-        """,
-        unsafe_allow_html=True,
-    )
+    st.markdown("### SYSTEM ARCHITECTURE")
     
     image_path = Path(__file__).resolve().parent / "assets" / "system_diagram.png"
     if image_path.exists():
         st.image(str(image_path), use_column_width=True)
     else:
-        st.info("💡 System diagram not found. Add `app/assets/system_diagram.png` to display it.")
+        st.info("System diagram not found. Add `app/assets/system_diagram.png` to display it.")
 
     st.markdown(
         """
-        <div style='background: linear-gradient(135deg, #f6f8fb 0%, #ffffff 100%); 
-                    padding: 2rem; 
-                    border-radius: 12px; 
-                    border-left: 4px solid #667eea;
-                    margin-top: 2rem;
-                    box-shadow: 0 2px 8px rgba(0,0,0,0.05);'>
-            <p style='font-size: 1.1rem; line-height: 1.8; color: #4a5568; margin: 0;'>
-                <strong style='color: #667eea;'>Monumental's fabrication data pipeline</strong> 
-                seamlessly stitches together <strong>CAM programming</strong>, 
-                <strong>robotic execution</strong>, <strong>quality measurements</strong>, 
-                and <strong>ERP context</strong>. Our sophisticated ETL jobs transform these 
-                siloed data feeds into a unified data warehouse, enabling powerful shared features 
-                for downstream analytics and machine learning applications.
+        <div class='industrial-panel'>
+            <p style='font-size: 1rem; line-height: 1.7; color: #2d3748; margin: 0; text-align: justify;'>
+                <strong style='color: #1a1d23;'>MONUMENTAL LABS DATA INTEGRATION PLATFORM</strong><br><br>
+                This system integrates data streams from CAM programming, robotic execution units, 
+                quality inspection sensors, and enterprise resource planning systems. ETL pipelines 
+                consolidate disparate data sources into a centralized warehouse architecture, 
+                providing standardized feature sets for operational analytics and predictive modeling.
+                <br><br>
+                <strong style='color: #1a1d23;'>KEY COMPONENTS:</strong> PowerMill toolpath generation, 
+                KUKA robotic telemetry, automated quality inspection, and real-time cost tracking.
             </p>
         </div>
         """,
@@ -259,15 +262,10 @@ def render_system_overview():
 
 def render_kpis(jobs, features):
     """Render key performance indicators."""
+    st.markdown("### OPERATIONAL METRICS")
     st.markdown(
-        """
-        <div style='text-align: center; margin-bottom: 2rem;'>
-            <h2 style='border: none; font-size: 2rem; color: #2d3748;'>
-                📊 Production Pulse
-            </h2>
-            <p style='color: #718096; font-size: 1rem;'>Real-time insights into fabrication performance</p>
-        </div>
-        """,
+        "<p style='color: #5a6472; font-size: 0.85rem; margin-bottom: 1.5rem;'>"
+        "Real-time fabrication performance indicators</p>",
         unsafe_allow_html=True,
     )
     
@@ -276,14 +274,14 @@ def render_kpis(jobs, features):
     
     with col1:
         st.metric(
-            "⏱️ Avg Carve Time",
+            "AVG CYCLE TIME",
             f"{avg_minutes:0.1f} min",
             delta=None,
         )
     
     with col2:
         st.metric(
-            "🏗️ Total Jobs",
+            "JOBS COMPLETED",
             f"{jobs['job_id'].nunique():,}",
             delta=None,
         )
@@ -291,16 +289,16 @@ def render_kpis(jobs, features):
     with col3:
         surface_avg = jobs['surface_score'].mean()
         st.metric(
-            "✨ Surface Quality",
-            f"{surface_avg:0.1f}",
-            delta=f"{surface_avg - 80:0.1f} vs target",
+            "SURFACE QUALITY",
+            f"{surface_avg:0.1f} / 100",
+            delta=f"{surface_avg - 80:0.1f} vs spec",
             delta_color="normal",
         )
     
     with col4:
         profit_margin = features['profit_margin'].mean()
         st.metric(
-            "💰 Profit Margin",
+            "MARGIN",
             f"{profit_margin:0.1%}",
             delta=None,
         )
@@ -308,15 +306,10 @@ def render_kpis(jobs, features):
 
 def render_process_analytics(features):
     """Render process analytics visuals."""
+    st.markdown("### PROCESS ANALYSIS")
     st.markdown(
-        """
-        <div style='text-align: center; margin-bottom: 2rem;'>
-            <h2 style='border: none; font-size: 2rem; color: #2d3748;'>
-                🔬 Process Analytics
-            </h2>
-            <p style='color: #718096; font-size: 1rem;'>Deep dive into fabrication performance metrics</p>
-        </div>
-        """,
+        "<p style='color: #5a6472; font-size: 0.85rem; margin-bottom: 1.5rem;'>"
+        "Detailed fabrication performance analysis</p>",
         unsafe_allow_html=True,
     )
     
@@ -334,15 +327,16 @@ def render_process_analytics(features):
                 "complexity_per_cm3": "Toolpath Complexity per cm³",
                 "duration_s": "Duration (s)",
             },
-            title="<b>Complexity vs. Carve Time</b>",
+            title="<b>TOOLPATH COMPLEXITY vs CYCLE TIME</b>",
             color_discrete_sequence=CHART_COLORS["primary"],
         )
         fig1.update_layout(
-            plot_bgcolor="rgba(0,0,0,0)",
-            paper_bgcolor="rgba(0,0,0,0)",
-            font_family="Inter",
-            title_font_size=16,
-            title_font_color="#2d3748",
+            plot_bgcolor="#ffffff",
+            paper_bgcolor="#ffffff",
+            font_family="IBM Plex Sans",
+            title_font_size=13,
+            title_font_color="#1a1d23",
+            font_color="#2d3748",
         )
         st.plotly_chart(fig1, use_container_width=True)
 
@@ -357,57 +351,54 @@ def render_process_analytics(features):
             color="stone_type",
             hover_name="job_id",
             labels={
-                "stone_hardness": "Approx. Mohs Hardness",
+                "stone_hardness": "Mohs Hardness",
                 "energy_per_cm3": "Energy per cm³ (kWh)",
             },
-            title="<b>Energy Load vs. Stone Hardness</b>",
-            color_discrete_sequence=CHART_COLORS["gradient"],
+            title="<b>MATERIAL HARDNESS vs ENERGY CONSUMPTION</b>",
+            color_discrete_sequence=CHART_COLORS["stone"],
         )
         fig2.update_layout(
-            plot_bgcolor="rgba(0,0,0,0)",
-            paper_bgcolor="rgba(0,0,0,0)",
-            font_family="Inter",
-            title_font_size=16,
-            title_font_color="#2d3748",
+            plot_bgcolor="#ffffff",
+            paper_bgcolor="#ffffff",
+            font_family="IBM Plex Sans",
+            title_font_size=13,
+            title_font_color="#1a1d23",
+            font_color="#2d3748",
         )
         st.plotly_chart(fig2, use_container_width=True)
 
     fig3 = px.density_heatmap(
-        features,
-        x="feed_rate_mm_min",
-        y="surface_score",
-        marginal_x="histogram",
-        marginal_y="histogram",
-        nbinsx=30,
-        nbinsy=20,
-        labels={
-            "feed_rate_mm_min": "Feed Rate (mm/min)",
-            "surface_score": "Surface Quality Score",
-        },
-        title="<b>Surface Quality vs. Feed Rate Distribution</b>",
-        color_continuous_scale=["#667eea", "#764ba2", "#f093fb"],
+            features,
+            x="feed_rate_mm_min",
+            y="surface_score",
+            marginal_x="histogram",
+            marginal_y="histogram",
+            nbinsx=30,
+            nbinsy=20,
+            labels={
+                "feed_rate_mm_min": "Feed Rate (mm/min)",
+                "surface_score": "Surface Quality Score",
+            },
+        title="<b>FEED RATE vs SURFACE QUALITY DISTRIBUTION</b>",
+        color_continuous_scale=["#3d4451", "#8b8680", "#b8860b"],
     )
     fig3.update_layout(
-        plot_bgcolor="rgba(0,0,0,0)",
-        paper_bgcolor="rgba(0,0,0,0)",
-        font_family="Inter",
-        title_font_size=16,
-        title_font_color="#2d3748",
+        plot_bgcolor="#ffffff",
+        paper_bgcolor="#ffffff",
+        font_family="IBM Plex Sans",
+        title_font_size=13,
+        title_font_color="#1a1d23",
+        font_color="#2d3748",
     )
     st.plotly_chart(fig3, use_container_width=True)
 
 
 def render_cost_profitability(jobs, features):
     """Render cost and profitability insights."""
+    st.markdown("### FINANCIAL ANALYSIS")
     st.markdown(
-        """
-        <div style='text-align: center; margin-bottom: 2rem;'>
-            <h2 style='border: none; font-size: 2rem; color: #2d3748;'>
-                💎 Cost & Profitability
-            </h2>
-            <p style='color: #718096; font-size: 1rem;'>Financial performance across jobs and materials</p>
-        </div>
-        """,
+        "<p style='color: #5a6472; font-size: 0.85rem; margin-bottom: 1.5rem;'>"
+        "Cost tracking and profitability by job and material type</p>",
         unsafe_allow_html=True,
     )
     
@@ -417,7 +408,7 @@ def render_cost_profitability(jobs, features):
     joined["profit_usd"] = joined["revenue_usd"] - joined["tool_wear_cost_usd"]
 
     # Display styled dataframe
-    st.markdown("##### 📋 Job Financial Details")
+    st.markdown("##### JOB COST BREAKDOWN")
     st.dataframe(
         joined[
             [
@@ -450,16 +441,17 @@ def render_cost_profitability(jobs, features):
             x="stone_type",
             y="profit_usd",
             color="stone_type",
-            title="<b>Total Profit by Stone Type</b>",
-            labels={"stone_type": "Stone Type", "profit_usd": "Total Profit (USD)"},
-            color_discrete_sequence=CHART_COLORS["gradient"],
+            title="<b>PROFIT BY MATERIAL TYPE</b>",
+            labels={"stone_type": "Material", "profit_usd": "Total Profit (USD)"},
+            color_discrete_sequence=CHART_COLORS["stone"],
         )
         fig_bar.update_layout(
-            plot_bgcolor="rgba(0,0,0,0)",
-            paper_bgcolor="rgba(0,0,0,0)",
-            font_family="Inter",
-            title_font_size=16,
-            title_font_color="#2d3748",
+            plot_bgcolor="#ffffff",
+            paper_bgcolor="#ffffff",
+            font_family="IBM Plex Sans",
+            title_font_size=13,
+            title_font_color="#1a1d23",
+            font_color="#2d3748",
             showlegend=False,
         )
         st.plotly_chart(fig_bar, use_container_width=True)
@@ -473,7 +465,7 @@ def render_cost_profitability(jobs, features):
             color="material",
             size="profit_usd",
             hover_data=["job_id", "stone_type"],
-            title="<b>Revenue vs. Tool Wear Cost</b>",
+            title="<b>REVENUE vs TOOLING COST</b>",
             labels={
                 "tool_wear_cost_usd": "Tool Wear Cost (USD)",
                 "revenue_usd": "Revenue (USD)",
@@ -481,26 +473,22 @@ def render_cost_profitability(jobs, features):
             color_discrete_sequence=CHART_COLORS["primary"],
         )
         fig_scatter.update_layout(
-            plot_bgcolor="rgba(0,0,0,0)",
-            paper_bgcolor="rgba(0,0,0,0)",
-            font_family="Inter",
-            title_font_size=16,
-            title_font_color="#2d3748",
+            plot_bgcolor="#ffffff",
+            paper_bgcolor="#ffffff",
+            font_family="IBM Plex Sans",
+            title_font_size=13,
+            title_font_color="#1a1d23",
+            font_color="#2d3748",
         )
         st.plotly_chart(fig_scatter, use_container_width=True)
 
 
 def render_feature_store(features):
     """Render engineered feature list and correlations."""
+    st.markdown("### FEATURE ENGINEERING")
     st.markdown(
-        """
-        <div style='text-align: center; margin-bottom: 2rem;'>
-            <h2 style='border: none; font-size: 2rem; color: #2d3748;'>
-                🤖 ML Feature Store
-            </h2>
-            <p style='color: #718096; font-size: 1rem;'>Engineered features powering machine learning models</p>
-        </div>
-        """,
+        "<p style='color: #5a6472; font-size: 0.85rem; margin-bottom: 1.5rem;'>"
+        "Machine learning features derived from process data</p>",
         unsafe_allow_html=True,
     )
     
@@ -523,16 +511,9 @@ def render_feature_store(features):
         }
     ]
 
-    st.markdown("##### 🔧 Available Features")
+    st.markdown("##### AVAILABLE FEATURES")
     st.markdown(
-        """
-        <div style='background: linear-gradient(135deg, #f6f8fb 0%, #ffffff 100%); 
-                    padding: 1.5rem; 
-                    border-radius: 12px; 
-                    border-left: 4px solid #667eea;
-                    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-                    margin-bottom: 2rem;'>
-        """,
+        "<div class='industrial-panel'>",
         unsafe_allow_html=True,
     )
     
@@ -541,52 +522,48 @@ def render_feature_store(features):
     for idx, column in enumerate(feature_columns):
         col_idx = idx % 3
         cols[col_idx].markdown(
-            f"<div style='padding: 0.5rem; background: white; margin: 0.25rem; "
-            f"border-radius: 6px; box-shadow: 0 1px 3px rgba(0,0,0,0.05);'>"
-            f"<code style='color: #667eea;'>{column}</code></div>",
+            f"<div style='padding: 0.4rem; background: #ffffff; margin: 0.25rem; "
+            f"border: 1px solid #3d4451;'>"
+            f"<code>{column}</code></div>",
             unsafe_allow_html=True,
         )
     
     st.markdown("</div>", unsafe_allow_html=True)
 
     # Correlation heatmap
-    st.markdown("##### 📊 Feature Correlation Matrix")
+    st.markdown("##### CORRELATION MATRIX")
     numeric_cols = feature_columns + ["duration_s"]
     corr = features[numeric_cols].corr()
     
     fig_corr = px.imshow(
-        corr,
-        zmin=-1,
-        zmax=1,
-        color_continuous_scale=["#764ba2", "#ffffff", "#667eea"],
-        title="<b>Feature Correlation Analysis</b>",
+            corr,
+            zmin=-1,
+            zmax=1,
+        color_continuous_scale=["#3d4451", "#e8e8e0", "#b8860b"],
+        title="<b>FEATURE CORRELATION ANALYSIS</b>",
         aspect="auto",
     )
     fig_corr.update_layout(
-        font_family="Inter",
-        title_font_size=16,
-        title_font_color="#2d3748",
-        paper_bgcolor="rgba(0,0,0,0)",
+        font_family="IBM Plex Sans",
+        title_font_size=13,
+        title_font_color="#1a1d23",
+        font_color="#2d3748",
+        paper_bgcolor="#ffffff",
     )
     st.plotly_chart(fig_corr, use_container_width=True)
 
 
 def render_data_quality(quality_report):
     """Render data quality metrics as progress and status."""
+    st.markdown("### DATA QUALITY CONTROL")
     st.markdown(
-        """
-        <div style='text-align: center; margin-bottom: 2rem;'>
-            <h2 style='border: none; font-size: 2rem; color: #2d3748;'>
-                ✅ Data Quality Monitoring
-            </h2>
-            <p style='color: #718096; font-size: 1rem;'>Real-time data validation and completeness tracking</p>
-        </div>
-        """,
+        "<p style='color: #5a6472; font-size: 0.85rem; margin-bottom: 1.5rem;'>"
+        "Real-time validation and completeness monitoring</p>",
         unsafe_allow_html=True,
     )
     
     # Completeness metrics
-    st.markdown("##### 📈 Data Completeness by Source")
+    st.markdown("##### SOURCE DATA COMPLETENESS")
     completeness = quality_report["completeness_percent"]
     
     for source, pct in completeness.items():
@@ -594,12 +571,12 @@ def render_data_quality(quality_report):
         with col1:
             st.progress(
                 min(int(pct), 100) / 100,
-                text=f"**{source.replace('_', ' ').title()}**"
+                text=f"**{source.replace('_', ' ').upper()}**"
             )
         with col2:
-            color = "#48bb78" if pct >= 95 else "#ed8936" if pct >= 80 else "#f56565"
+            color = "#2d5016" if pct >= 95 else "#92400e" if pct >= 80 else "#991b1b"
             st.markdown(
-                f"<div style='text-align: right; font-size: 1.2rem; font-weight: 600; color: {color};'>"
+                f"<div style='text-align: right; font-size: 1.1rem; font-weight: 700; color: {color};'>"
                 f"{pct}%</div>",
                 unsafe_allow_html=True,
             )
@@ -607,7 +584,7 @@ def render_data_quality(quality_report):
     st.markdown("<br>", unsafe_allow_html=True)
     
     # Critical metrics
-    st.markdown("##### 🎯 Critical Field Validation")
+    st.markdown("##### VALIDATION STATUS")
     col1, col2, col3, col4 = st.columns(4)
     
     critical_nulls = quality_report["critical_nulls"]
@@ -615,63 +592,64 @@ def render_data_quality(quality_report):
     with col1:
         null_duration = critical_nulls.get("duration_s", 0)
         st.metric(
-            "⏱️ Null Duration",
+            "NULL DURATION",
             f"{null_duration}",
-            delta=None if null_duration == 0 else "Attention needed",
+            delta=None if null_duration == 0 else "Check required",
             delta_color="inverse",
         )
     
     with col2:
         null_revenue = critical_nulls.get("revenue_usd", 0)
         st.metric(
-            "💰 Null Revenue",
+            "NULL REVENUE",
             f"{null_revenue}",
-            delta=None if null_revenue == 0 else "Attention needed",
+            delta=None if null_revenue == 0 else "Check required",
             delta_color="inverse",
         )
-    
+
     outliers = quality_report["carve_time_outliers"]
     with col3:
         st.metric(
-            "⚠️ Time Outliers",
+            "TIME OUTLIERS",
             f"{outliers['count']}",
             delta=None,
-        )
-    
+    )
+
     tool_validations = quality_report["tool_catalog_validation"]
     with col4:
         st.metric(
-            "🔧 Invalid Tools",
+            "INVALID TOOLS",
             f"{tool_validations['invalid_count']}",
             delta=None,
         )
 
     # Detailed outlier information
     if outliers['job_ids']:
-        st.markdown("##### 🔍 Outlier Details")
-        st.info(
-            f"**Carve Time Outliers:** Jobs {', '.join(outliers['job_ids'][:5])} "
-            f"{'and more...' if len(outliers['job_ids']) > 5 else ''}"
+        st.markdown("##### ANOMALY DETECTION")
+    st.info(
+            f"**Cycle Time Anomalies:** Jobs {', '.join(outliers['job_ids'][:5])} "
+            f"{'+ {len(outliers["job_ids"]) - 5} more' if len(outliers['job_ids']) > 5 else ''}"
         )
 
     if tool_validations['unknown_ids']:
         st.warning(
             f"**Unknown Tool IDs:** {', '.join(tool_validations['unknown_ids'][:5])} "
-            f"{'and more...' if len(tool_validations['unknown_ids']) > 5 else ''}"
-        )
+            f"{'+ {len(tool_validations["unknown_ids"]) - 5} more' if len(tool_validations['unknown_ids']) > 5 else ''}"
+    )
 
 
 def main():
     """Application entry point."""
-    # Beautiful header
+    # Industrial header
     st.markdown(
         """
-        <div style='text-align: center; padding: 2rem 0 1rem 0;'>
-            <h1 style='font-size: 3.5rem; margin-bottom: 0.5rem;'>
-                🏛️ Fabrication Data Platform
+        <div style='text-align: center; padding: 1.5rem 0 1rem 0; border-bottom: 4px solid #b8860b;'>
+            <h1 style='font-size: 2.8rem; margin-bottom: 0.3rem;'>
+                FABRICATION DATA PLATFORM
             </h1>
-            <p style='font-size: 1.3rem; color: #718096; font-weight: 400; margin-top: 0;'>
-                Unifying stone fabrication data for intelligent manufacturing
+            <p style='font-size: 1rem; color: #5a6472; font-weight: 600; margin-top: 0; 
+                      text-transform: uppercase; letter-spacing: 2px;'>
+                Monumental Labs • Robotic Stone Manufacturing
             </p>
         </div>
         """,
@@ -682,19 +660,19 @@ def main():
         jobs, features, quality = load_data()
     except FileNotFoundError as exc:
         st.error(
-            f"⚠️ **Data Not Found**\n\n{exc}\n\n"
+            f"**DATA NOT FOUND**\n\n{exc}\n\n"
             "Please run the data generation and ETL scripts before launching the dashboard."
         )
         return
 
     tabs = st.tabs(
         [
-            "🏛️ System Overview",
-            "📊 KPIs",
-            "🔬 Process Analytics",
-            "💎 Cost & Profitability",
-            "🤖 ML Features",
-            "✅ Data Quality",
+            "SYSTEM",
+            "METRICS",
+            "PROCESS",
+            "FINANCIAL",
+            "FEATURES",
+            "QUALITY",
         ]
     )
 
@@ -711,39 +689,46 @@ def main():
     with tabs[5]:
         render_data_quality(quality)
 
-    # Beautiful footer
+    # Industrial footer
     st.markdown("<br><br>", unsafe_allow_html=True)
     st.markdown(
         """
         <div class='footer'>
-            <div style='max-width: 800px; margin: 0 auto;'>
-                <p style='font-weight: 600; color: #4a5568; margin-bottom: 0.5rem;'>
+            <div style='max-width: 900px; margin: 0 auto;'>
+                <p style='font-weight: 700; color: #1a1d23; margin-bottom: 0.8rem; 
+                          text-transform: uppercase; letter-spacing: 1px; font-size: 0.9rem;'>
                     Technology Stack
                 </p>
-                <p style='color: #718096;'>
-                    <span style='background: #f7fafc; padding: 0.3rem 0.8rem; border-radius: 20px; 
-                                 margin: 0 0.3rem; display: inline-block; margin-bottom: 0.5rem;'>
-                        🐍 Python
+                <p style='color: #5a6472; line-height: 1.8;'>
+                    <span style='background: #ffffff; padding: 0.4rem 1rem; border: 1px solid #3d4451; 
+                                 margin: 0 0.3rem; display: inline-block; margin-bottom: 0.5rem; 
+                                 font-family: IBM Plex Mono; font-size: 0.8rem;'>
+                        Python
                     </span>
-                    <span style='background: #f7fafc; padding: 0.3rem 0.8rem; border-radius: 20px; 
-                                 margin: 0 0.3rem; display: inline-block; margin-bottom: 0.5rem;'>
-                        🦆 DuckDB
+                    <span style='background: #ffffff; padding: 0.4rem 1rem; border: 1px solid #3d4451; 
+                                 margin: 0 0.3rem; display: inline-block; margin-bottom: 0.5rem;
+                                 font-family: IBM Plex Mono; font-size: 0.8rem;'>
+                        DuckDB
                     </span>
-                    <span style='background: #f7fafc; padding: 0.3rem 0.8rem; border-radius: 20px; 
-                                 margin: 0 0.3rem; display: inline-block; margin-bottom: 0.5rem;'>
-                        🐼 Pandas
+                    <span style='background: #ffffff; padding: 0.4rem 1rem; border: 1px solid #3d4451; 
+                                 margin: 0 0.3rem; display: inline-block; margin-bottom: 0.5rem;
+                                 font-family: IBM Plex Mono; font-size: 0.8rem;'>
+                        Pandas
                     </span>
-                    <span style='background: #f7fafc; padding: 0.3rem 0.8rem; border-radius: 20px; 
-                                 margin: 0 0.3rem; display: inline-block; margin-bottom: 0.5rem;'>
-                        📊 Plotly
+                    <span style='background: #ffffff; padding: 0.4rem 1rem; border: 1px solid #3d4451; 
+                                 margin: 0 0.3rem; display: inline-block; margin-bottom: 0.5rem;
+                                 font-family: IBM Plex Mono; font-size: 0.8rem;'>
+                        Plotly
                     </span>
-                    <span style='background: #f7fafc; padding: 0.3rem 0.8rem; border-radius: 20px; 
-                                 margin: 0 0.3rem; display: inline-block; margin-bottom: 0.5rem;'>
-                        🎈 Streamlit
+                    <span style='background: #ffffff; padding: 0.4rem 1rem; border: 1px solid #3d4451; 
+                                 margin: 0 0.3rem; display: inline-block; margin-bottom: 0.5rem;
+                                 font-family: IBM Plex Mono; font-size: 0.8rem;'>
+                        Streamlit
                     </span>
                 </p>
-                <p style='color: #a0aec0; font-size: 0.85rem; margin-top: 1rem;'>
-                    Synthetic data generation • KUKA robot integration • Real-time fabrication analytics
+                <p style='color: #5a6472; font-size: 0.8rem; margin-top: 1.2rem; text-transform: uppercase;
+                          letter-spacing: 0.5px;'>
+                    PowerMill CAM • KUKA Robotic Systems • Real-Time Process Analytics
                 </p>
             </div>
         </div>
